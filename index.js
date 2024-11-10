@@ -6,6 +6,7 @@ import ip from 'ip'
 const app = express();
 
 app.set("trust proxy", true);
+
 const getClientIP = (req) => {
   let forwardedFor = req.headers['x-forwarded-for'];
   let ip = forwardedFor ? forwardedFor.split(',')[0] : null;
@@ -19,7 +20,7 @@ const getClientIP = (req) => {
 
 app.get("/", async (req, res) => {
   // Set endpoint and your access key
-  const clientIp = ip.address();
+  const clientIp = getClientIP(req);
   console.log(clientIp)
   const accessKey = 'e3ad3634-746c-4779-b322-b2c3660717b5';
   const url = `https://apiip.net/api/check?ip=${clientIp}&accessKey=${accessKey}`;
