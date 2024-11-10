@@ -1,5 +1,5 @@
 {
-  "name": "malabna",
+  "name": "isst_location",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@google-cloud/aiplatform": "^3.31.0",
     "@superfaceai/one-sdk": "^2.4.2",
+    "axios": "^1.7.7",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.0.1",
     "docker": "^1.0.0",
@@ -23,6 +24,9 @@
     "express": "^4.18.3",
     "fs": "^0.0.1-security",
     "generate-password": "^1.7.1",
+    "ip": "^2.0.1",
+    "ipaddr.js": "^2.2.0",
+    "ipdata": "^2.2.4",
     "joi": "^17.12.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
@@ -34,6 +38,7 @@
     "nodemon": "^3.1.0",
     "openai": "^4.70.2",
     "qrcode": "^1.5.3",
+    "request-ip": "^3.3.0",
     "sequelize": "^6.28.0",
     "transporter": "^0.0.1"
   }
