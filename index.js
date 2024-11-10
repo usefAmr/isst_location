@@ -5,12 +5,13 @@ import ip from 'ip'
 import fetch from "node-fetch";
 
 const app = express();
+const response = await fetch('https://api.ipify.org?format=json');
+const data = await response.json();
+const clientIp = data.ip
 
 app.get("/", async (req, res) => {
   // Set endpoint and your access key
-  const response = await fetch('https://api.ipify.org?format=json');
-  const data = await response.json();
-  const clientIp = data.ip
+  
   const accessKey = '4501e4cb-328c-4255-9b49-4f6bfd8b930f';
   const url = `https://apiip.net/api/check?ip=${clientIp}&accessKey=${accessKey}`;
 
