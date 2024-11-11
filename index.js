@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
 
   res.send(`Client IP: ${clientIp}, Public IP: ${publicIp}`);
   const accessKey = '4501e4cb-328c-4255-9b49-4f6bfd8b930f';
-  const url = `https://apiip.net/api/check?ip=${publicIp}&accessKey=${accessKey}`;
+  const url = `https://apiip.net/api/check?ip=${clientIp}&accessKey=${accessKey}`;
 
   const location = await fetch(url);
 
